@@ -15,3 +15,7 @@ before the model runs.
 
 'main_iter_4step_RungeKutta.m' is the main iteratoin part. It marches the governning eq. in time using 4th-order explicit Runge-Kutta scheme for the nonlinear term(with Arakawa 1966's conserving scheme for the nonliner Jacobian), and implicit (and 2nd-order central differencing) for the other terms(beta term, Ekman term, diffusion term). 
 
+
+'bplume_slantwall_unrotate_lab.m' is the Double-Fourier(linear) theory used to decompose the total wave field into the incidental and the reflected one and more to show the formation of the meanders at the flanks of the beta-plume.
+
+
