@@ -1,4 +1,4 @@
-# 1.5-layer model fro rotating-tank experiment
+# 1.5-layer model for rotating-tank experiment
 This is a finite-differencing model for the stream function-relative voticity equation used to model the barotropic flow in the rotating tank experiment with a cylindrical tank of 110cm diameter 110cm and 40cm depth . Before the experiment, a solid barrier inserted inside acting as the wall and it is aligned in the raidal direction.
 
 In order to use this code, a gird file ('N?.mat', where ? stands for the horizontal grid resolution) needs to be generated using "genXYgrid_vect.m". It creates a horizontal Cartesian grid covering the tank geometry. This geometry configuration was recorded by a camera as full-color pictures saved in saved in './for_grid_gen/' 
