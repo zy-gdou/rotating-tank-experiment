@@ -31,7 +31,7 @@ Given the simplicity of the stream function-relative vorticity equation, its dim
 
 
 One example of the simulation results (relative vorticity normalized by the Coriolis parameter) is shown below 
-https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
+https://github.com/zy-gdou/rotating-tank-experiment/blob/59c78b8acde8dfbfb04041e396ff22cce39971d6/Amp=-0.150%20R_f=4cm%20Rd=5cm%20Ah=0.05%20frc=0.0010%20220s.avi
 
 'bplume_slantwall_unrotate_lab.m' is the Double-Fourier(linear) theory used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). This theoy is used to show the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
 
