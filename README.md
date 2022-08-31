@@ -35,5 +35,4 @@ One example of the simulation results (relative vorticity normalized by the Cori
 
 # Double-Fourier theory 
 'bplume_slantwall_unrotate_lab.m' formulated the Double-Fourier(linear) theory. This theory is used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). This theoy is used to show the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
-$\beta=232+\frac{1}{3}$
 
