@@ -19,11 +19,12 @@ output frequency:dt,s;
 logical switch for the types of the boundary condition: noslip=true by default;
 logical switch for nonlinear advection: nonlinear=true by default; otherwise the nonlinear advection term won't be included.
 
-'pars.m' contains other experimental parameters needed for the simulation and useful coefficients for the Possion equation solver and time marching schemes. It also checks if this is a new run or a restart from any previous runs. If there is no folder with the name specified as the parameter combination given from sweep_run.m, then a new empty folder will be created and a new run starts with the output files saved in that new folder. If there is an exist old folder with the same name as specified by the "sweep_run.m" and contains multiple output files (.mat) inside, then this will be recognized as an restart run. Its initial condition is given by the last output file from the previous run. The restart run then adds output files to the old folder.
+'pars.m' checks if this is a new run or a restart from any previous runs. If there is no folder with the name specified as the parameter combination given from sweep_run.m, then a new empty folder will be created, a new run starts, and the output files will be saved in that new folder. If there is an exist old folder with the same name as specified by the "sweep_run.m" and that folder contains multiple output files (.mat) inside, then this run will be recognized as an restart run. Its initial condition is given by the last output file. The restart run then adds output files to the old folder.
+'pars.m' also contains other experimental parameters needed for the simulation and useful coefficients for the Possion equation solver and the time marching schemes. 
 
 'main_iter_4step_RungeKutta.m' is the main iteration part. It marches the governning eq. in time using 4th-order explicit Runge-Kutta scheme for the nonlinear term(with Arakawa 1966's conserving scheme for the spatial discretization) if nonlinear=true, and explicit (2nd-order central differencing) for the other terms(beta term, Ekman term, diffusion term). 
 
-'allocate_matrices.m' initialize the matrices used by the simulation by allocating 1D vectors for them. This allocation is called everytime when the model starts (no matter if it is a new run or a restart run) .
+'allocate_matrices.m' initialize the matrices for the variables used by the simulation by allocating 1D vectors for them. This allocation is called everytime when the model starts (no matter if it is a new run or a restart run) .
 
 'bplume_slantwall_unrotate_lab.m' is the Double-Fourier(linear) theory used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). This theoy is used to show the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
 
