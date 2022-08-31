@@ -3,7 +3,7 @@ This is a finite-differencing model for the stream function-relative voticity eq
 
 The geometry configuration was recorded by a camera as full-color pictures saved in './for_grid_gen/'. Since the location/orientation of the wall was varied in some experiments, you may find multiple images there. Each image can be used by "genXYgrid_vect.m" to create a gird file for a specific geometry configuration. The grid file is named as "N?.mat" with "?" standing for the horizontal grid resolution(default value 500).
 
-![This is an image](for_grid_gen/4oclock.png)
+![an example of geometry setup](for_grid_gen/4oclock.png| width=100)
 
 A grid file must be generated before runing the code and it is saved in the same directory as "genXYgrid_vect.m". 
 
