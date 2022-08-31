@@ -5,9 +5,9 @@ The geometry configuration was recorded by a camera as full-color pictures saved
 
 <img src="https://github.com/zy-gdou/rotating-tank-experiment/blob/385a69e7659770761996ae03dda59c8295bc769b/for_grid_gen/4oclock.png" width=50% height=50%>
 
-This image can be used by "genXYgrid_vect.m" to create a gird file for a specific geometry configuration. The grid file is named as "N?.mat" with "?" standing for the horizontal grid resolution(default value 500). A grid file must be generated before runing the code and it is saved in the same directory as "genXYgrid_vect.m". 
+This image can be used by "genXYgrid_vect.m" to create a gird file for a specific geometry configuration. The grid file is named as "N?.mat" with "?" standing for the horizontal grid resolution(default value 500). It must be generated before runing the code and is saved in the same directory as "genXYgrid_vect.m". 
 
-The square domain occupied by the tank is discretized as horizontal Cartesian grid. Only the region inside the tank is modeled.
+A square domain occupied by the tank is discretized as horizontal Cartesian grid. Only the region inside the tank is modeled.
 "genXYgrid_vect.m" defines the boundary points(the points located at the side wall of the tank), ghost points(points dropping outside of the tank with  a distance of 1 dx to the neighouring boundary points, where dx is the grid size), and inside points(points dropping inside the tank which are the major part of the total node population). This classification is useful to implement the boundary conditions. Two boundary conditions (no-slip and free-slip) can be applied the lateral boundaries(side wall of the cylindrical tank and 3 sides of the barrier) using one of the schemes in the review paper by E, Weinan & Liu, Guoqiang 1996(Journal of Computational Physics).
 
 'sweep_run.m' defines the parameter space we are going to survey. The key parameters are:
@@ -23,12 +23,15 @@ Given the simplicity of the stream function-relative vorticity equation, its dim
 3. logical switch for the types of the boundary condition: noslip=true by default;
 4. logical switch for nonlinear advection: nonlinear=true by default; otherwise the nonlinear advection term won't be included.
 
-'pars.m' checks if this is a new run or a restart from any previous runs. If there is no folder with the name specified as the parameter combination given from sweep_run.m, then a new empty folder will be created, a new run starts, and the output files will be saved in that new folder. If there is an exist old folder with the same name as specified by the "sweep_run.m" and that folder contains multiple output files (.mat) inside, then this run will be recognized as an restart run. Its initial condition is given by the last output file. The restart run then adds output files to the old folder.
-'pars.m' also contains other experimental parameters needed for the simulation and useful coefficients for the Possion equation solver and the time marching schemes. 
+'pars.m' checks if this is a new run or a restart from any previous run. If there is no folder with the name specified as the parameter combination given in sweep_run.m, then a new folder will be created, a new run starts, and the output files will be saved in that new folder. If there is an exist folder with the same name as specified in the "sweep_run.m" and that folder contains multiple output files (.mat), then this is a restart run. The initial condition is given by the last output file from the previous run. The restart run then adds output files to the old folder. 'pars.m' also contains other experimental parameters needed for the simulation and useful coefficients for the Possion equation solver and the time marching schemes. 
 
 'main_iter_4step_RungeKutta.m' is the main iteration part. It marches the governning eq. in time using 4th-order explicit Runge-Kutta scheme for the nonlinear term(with Arakawa 1966's conserving scheme for the spatial discretization) if nonlinear=true, and explicit (2nd-order central differencing) for the other terms(beta term, Ekman term, diffusion term). 
 
 'allocate_matrices.m' initialize the matrices for the variables used by the simulation by allocating 1D vectors for them. This allocation is called everytime when the model starts (no matter if it is a new run or a restart run) .
+
+
+One example of the simulation results (relative vorticity normalized by the Coriolis parameter) is shown below 
+https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
 
 'bplume_slantwall_unrotate_lab.m' is the Double-Fourier(linear) theory used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). This theoy is used to show the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
 
