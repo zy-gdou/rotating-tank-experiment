@@ -4,7 +4,7 @@ $$\frac{\partial}{\partial t}(\nabla^2-k_d^2)\psi+J(\psi,\nabla^2\psi)+\beta\fra
 
 1. $\psi$ is the stream function;
 2. $\zeta=\nabla^2\psi$ is the relative voriticyt;
-3. $k_d=1/R_d$ with the deformation radius $R_d=\sqrt(gH)/f_0$, where $g$ is the gravitational acceleration, $H$ is the mean water depth and $f_0$ is the Coriolis parameter;
+3. $k_d=1/R_d$ with the deformation radius $R_d=\sqrt{gH}/f_0$, where $g$ is the gravitational acceleration, $H$ is the mean water depth and $f_0$ is the Coriolis parameter;
 4. $J(\psi,\zeta)=\psi_x\zeta_y-\zeta_x\psi_y$ is the nonlinear advection written in a Jacobian form;
 5. $\beta$ is the topographic beta effect;
 6. $\gamma$ is the Ekman friction;
