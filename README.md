@@ -1,5 +1,5 @@
 # 1.5-layer model for rotating-tank experiment
-This is a finite-differencing model for the stream function($\psi$)-relative voticity($\zeta$) equation 
+This is a finite-differencing model for the stream function-relative voticity equation:
 $$\frac{\partial}{\partial t}(\nabla^2-k_d^2)\psi+J(\psi,\nabla^2\psi)+\beta\frac{\partial \psi}{\partial x}+\gamma\nabla^2\psi=Q$$
 1. $\psi$ is the stream function;
 2. $\zeta=\nabla^2\psi=(\partial_{xx}+\partial_yy)\psi$ is the relative voriticy;
@@ -32,7 +32,7 @@ Given the simplicity of the $\psi-\zeta$ equation, its dimensional form is discr
 1. the total time of integration:T_tot,s;
 2. output frequency:dt,s; 
 3. logical switch for the types of the boundary condition: noslip=true by default;
-4. logical switch for nonlinear advection: nonlinear=true by default; otherwise the nonlinear advection term won't be included.
+4. logical switch for nonlinear advection: nonlinear=true by default; otherwise the nonlinear term won't be included.
 
 'pars.m' checks if this is a new run or a restart from any previous run. If there is no folder with the name specified as the parameter combination given in 'sweep_run.m', then a new folder will be created, a new run starts, and the output files will be saved in that  folder. If there is an exist folder with the same name as specified in the "sweep_run.m" and that folder contains multiple output files (.mat), then this is a restart run. The initial condition is given by the last output file from the previous run. The restart run then append output files to the old folder. 'pars.m' also contains other experimental parameters needed for the simulation and useful coefficients for the Possion equation solver and the time marching schemes. 
 
