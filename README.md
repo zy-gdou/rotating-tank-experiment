@@ -11,11 +11,11 @@ A square domain occupied by the tank is discretized as horizontal Cartesian grid
 "genXYgrid_vect.m" defines the boundary points(the points located at the side wall of the tank), ghost points(points dropping outside of the tank with  a distance of 1 dx to the neighouring boundary points, where dx is the grid size), and inside points(points dropping inside the tank which are the major part of the total node population). This classification is useful to implement the boundary conditions. Two boundary conditions (no-slip and free-slip) can be applied the lateral boundaries(side wall of the cylindrical tank and 3 sides of the barrier) using one of the schemes in the review paper by E, Weinan & Liu, Guoqiang 1996(Journal of Computational Physics).
 
 'sweep_run.m' defines the parameter space we are going to survey. The key parameters are:
-1. amplitude of the forcign vortex: Amp, s^-2 ;
+1. amplitude of the forcign vortex: Amp, $s^-2$ ;
 2. radius of the forcing vortex: foring_R , cm; 
 3. barotropic deformation radius: Rd,cm; 
-3. Ekman friction: gamma, s^-1; 
-4. bulck viscosity: Ah, cm^2/s 
+3. Ekman friction: gamma, $s^{-1}$; 
+4. bulck viscosity: Ah, $cm^2/s$ 
 
 Given the simplicity of the stream function-relative vorticity equation, its dimensional form is discretized; this makes the code more readable and results easier to interpret. In "sweep_run.m", user can also specify
 1. the total time of integration:T_tot,s;
