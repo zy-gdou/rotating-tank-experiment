@@ -41,7 +41,7 @@ Given the simplicity of the $\psi-\zeta$ equation, its dimensional form is discr
 
 'allocate_matrices.m' initialize the useful matrices by allocating 1D vectors for them. This allocation is called everytime when the model starts (no matter if it is a new run or a restart run). When time integration finishes without overflow, the final-step $\psi$ will be saved in the case folder, which is a checkpoint for restart.
 
-One example of the simulation results is shown in the [![video]()](https://youtu.be/C0-KzsiVW-g).
+One example of the simulation results is shown in the [![video]()](https://youtu.be/MHM2IbPPq_U).
 
 # Double-Fourier theory 
 'bplume_slantwall_unrotate_lab.m' formulated a Double-Fourier(linear) theory. This theory is used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). It shows that the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
