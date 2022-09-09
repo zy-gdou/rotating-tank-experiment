@@ -44,5 +44,5 @@ Given the simplicity of the $\psi-\zeta$ equation, its dimensional form is discr
 One example of the simulation results is shown in the [![video]()](https://youtu.be/MHM2IbPPq_U).
 
 # Double-Fourier theory 
-'bplume_slantwall_unrotate_lab.m' formulated a Double-Fourier(linear) theory. This theory is used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). It shows that the formation of the meanders at the flanks of the beta-plume caused by the reflected Rossby waves.
+'bplume_slantwall_unrotate_lab.m' formulated a Double-Fourier(linear) theory. This theory is used to decompose the total wave field into the incidental and the reflected ones in a rectangular domain (a Cartesian coordinate system). It shows that the formation of the meanders at the flanks of the $\beta$-plume can be caused by the reflected Rossby waves.
 
