@@ -1,4 +1,4 @@
-# A barotropic model for flows in rotating-tank experiment
+### A barotropic model for flows in rotating-tank experiment
 This is a finite-differencing model for the stream function-relative voticity equation:
 $$\frac{\partial}{\partial t}(\nabla^2-k_d^2)\psi+J(\psi,\nabla^2\psi)+\beta\frac{\partial \psi}{\partial x}+\gamma\nabla^2\psi=Q$$
 1. $\psi$ is the stream function whose dimension is $U^2L$ with $U$ and $L$ denoting the characteristic velocity scale and length scale;
